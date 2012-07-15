@@ -1,0 +1,28 @@
+{
+  "name"          : "Zapakatel-test-suits",
+  "description"   : "Testing suits for zapakatel",
+  "homepage"      : "http://allin1.cz",
+  "keywords"      : ["allin1"],
+  "author"        : "Tomas Hegenbart <hegenbart@allin1.cz>",
+  "repository"    : {"type": "git", "url": "ssh+git://vps@repo.allin1.cz/zapakatel_nodejs_test_suit"},
+  "main"          : "server.js",
+  "version"       : "1.0.0",
+  "contributors": [ 
+    {
+      "name": "Tomas Hegenbart",
+      "email": "hegenbart@allin1.cz"
+    } 
+  ],
+  "dependencies" : {
+    "zombie"   :  "0.12.x",
+    "express"  :  "2.5.x",
+    "moment"   :  "1.4.0",
+    "underscore"  :  "1.3.x",
+    "vows" :  "0.6.x",
+	"amanda": "0.2.x",
+  "safe_datejs": "*"
+  },
+  "engine": {
+    "node": ">=0.4"
+  }
+}
