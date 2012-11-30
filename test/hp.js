@@ -15,7 +15,7 @@ vows.describe('Úvodní stránka').addBatch({
 
 
 		'Jsou nějaké slevy v vedlejších slevách':function (topic) {
-			assert.strictEqual (browser.queryAll(".right-panel-deal-image").length > 0, true);
+			assert.strictEqual (browser.queryAll(".standby-deal").length > 0, true);
 		},
 
 

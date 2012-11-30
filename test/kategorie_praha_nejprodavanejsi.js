@@ -11,6 +11,6 @@ var options = {
 vows.describe('Kategorie')
 
 //1000 Praha
-.addBatch({'Praha Nejprodávanější': preparedTests.categoryCheck(options, 1000, 'nejprodavanejsi', 'Nejprodávanější')})
+.addBatch({'Praha Cestování': preparedTests.categoryCheck(options, 1000, 'cestovani', 'Cestování')})
 
 .export(module);

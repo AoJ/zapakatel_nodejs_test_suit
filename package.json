@@ -25,4 +25,7 @@
   "engine": {
     "node": ">=0.4"
   }
+	,"scripts": {
+  	"start": "server.js"
+}
 }

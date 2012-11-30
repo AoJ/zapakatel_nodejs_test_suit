@@ -24,14 +24,9 @@ exports.categoryCheck = function(options, city, cat, name) {
 
 
 	if(all || options.minDeals) tests['V kategorii ' + name + ' je alespoň 1 sleva'] = function() {
-		var container = browser.querySelector('#content');
-		var deals = browser.document.querySelectorAll(".box-rc-big", container);
+		var container = browser.querySelector('#main');
+		var deals = browser.document.querySelectorAll(".standby-deal", container);
 		assert.strictEqual (deals.length > 0, true);
-	};
-
-
-	if(all || options.sideDeals) tests['Vedlejší slevy nejsou prázdné'] =  function() {
-		assert.strictEqual (browser.queryAll(".right-panel-deal-image").length > 0, true);
 	};
 
 
@@ -42,14 +37,15 @@ exports.categoryCheck = function(options, city, cat, name) {
 
 
 	if(all || options.h1) tests['V h1 je ' + name] = function() {
-		assert.include (browser.text('#content h1'), name);
+		assert.include (browser.text('#main h1'), name);
 	};
 	
 
 	if(all || options.titles) tests['nadpisy mají správné pořadí H1 > H2'] = function() {
 		var titles = browser.queryAll('h1,h2');
 		assert.equal(titles[0].nodeName, 'H1');
-		assert.equal(titles[1].nodeName, 'H2');
+		assert.equal(titles[1].nodeName, 'H1');
+		assert.equal(titles[2].nodeName, 'H2');
 	};
 
 	return tests;
