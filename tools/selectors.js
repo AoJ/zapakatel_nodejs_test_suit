@@ -2,6 +2,15 @@ var _ = require('underscore');
 
 var selectors = {};
 
+selectors.getH1 = function(document) {
+	return document.querySelector("h1");
+};
+
+selectors.getStandbyDeals = function(document) {
+	var container = browser.querySelector('#main');
+	return browser.document.querySelectorAll(".standby-deal", container);
+};
+
 selectors.getSideDealsIds = function(document) {
 
 	var selectors = {
